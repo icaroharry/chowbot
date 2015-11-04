@@ -1,0 +1,10 @@
+{
+  "name": "Chowbot",
+  "description": "Chow bot for telegram",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "node-telegram-bot-api": "*",
+    "request": "*"
+  }
+}
