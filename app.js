@@ -21,12 +21,20 @@ bot.onText(/\/random/, function (msg) {
   bot.sendPhoto(chatId, photo, {caption: "Chowmitos"});
 });
 
-// Matches /audio
+// Matches /photo
+bot.onText(/to com frio/, function (msg) {
+  var chatId = msg.chat.id;
+  var rand = Math.floor(Math.random() * 10);
+  // From file
+  var photo = __dirname + '/img/7.jpg';
+  bot.sendPhoto(chatId, photo, {caption: "toma aqui"});
+});
+
+// Matches /badzona
 bot.onText(/\/badzona/, function (msg) {
   var chatId = msg.chat.id;
   var audio = __dirname + '/audio/0.ogg';
   
-  // From HTTP request!
   bot.sendAudio(chatId, audio);
 });
 
