@@ -13,8 +13,9 @@ var options = {
     cert: __dirname+'/crt.pem'
   }
 };
-console.log(port);
-console.log(host);
+
+console.log('%d ', port);
+console.log('%s', options.webHook.cert);
 
 var bot = new TelegramBot(token, options);
 
