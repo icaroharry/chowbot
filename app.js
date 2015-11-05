@@ -6,8 +6,10 @@ var options = {
 };
 
 var token = process.env.TELEGRAM_BOT_TOKEN || '141314625:AAG4DlFQG0y7qAgQ5Ly1S14uyOLcMH7hNzw';
+var port = process.env.PORT || 8443;
+var host = process.env.HOST;
 
-var bot = new TelegramBot(token, options);
+var bot = new TelegramBot(token, {webHook: {port: port, host: host}});
 bot.getMe().then(function (me) {
   console.log('Hi my name is %s!', me.username);
 });
