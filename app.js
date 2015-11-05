@@ -16,7 +16,7 @@ bot.getMe().then(function (me) {
 // Matches /photo
 bot.onText(/\/random/, function (msg) {
   var chatId = msg.chat.id;
-  var rand = Math.floor(Math.random() * 10);
+  var rand = Math.floor(Math.random() * 17);
   // From file
   var photo = __dirname + '/img/' + rand + '.jpg';
   bot.sendPhoto(chatId, photo, {caption: "Chowmitos"});
@@ -58,3 +58,22 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
   var resp = match[1];
   bot.sendMessage(chatId, resp);
 });
+
+// Matches a x-chow
+bot.onText(/\/xchow/, function (msg) {
+  var chatId = msg.chat.id;
+  var rand = Math.floor(Math.random() * 9);
+  // From file
+  var photo = __dirname + '/img/xchow/' + rand + '.jpg';
+  bot.sendPhoto(chatId, photo, {caption: "Esse é nervoso"});
+});
+
+
+// Matches a x-chow
+bot.onText(/\/natal/, function (msg) {
+  var chatId = msg.chat.id;
+  // From file
+  var photo = __dirname + '/img/izaunatal.jpg';
+  bot.sendPhoto(chatId, photo, {caption: "Filis Natau"});
+});
+
