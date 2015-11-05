@@ -62,10 +62,43 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
 // Matches a x-chow
 bot.onText(/\/xchow/, function (msg) {
   var chatId = msg.chat.id;
-  var rand = Math.floor(Math.random() * 9);
+  var rand = Math.floor(Math.random() * 10);
   // From file
+  var msg = '';
+  switch(rand){
+    case 0:
+      msg = 'Eu invoco o Furacão de Bugs!!!!';
+      break;
+    case 1:
+      msg = 'Quero ver passar por cima do meu Mojito!';
+      break;
+    case 2:
+      msg = 'Meu ruivo vai te enfeitiçar!';
+      break;  
+    case 3:
+      msg = 'Vou implantar a ditadura chowmunista';
+      break;
+    case 4:
+      msg = 'Não adianta esconder as putarias fechando a porta!';
+      break;
+    case 5:
+      msg = 'Controlo sua mente e te levo para o mundo da raposinha';
+      break;
+    case 6:
+      msg = 'Minha beleza sufoca. Vou sugar suas energias.';
+      break;
+    case 7:
+      msg = 'Não há frio que resista ao meu exército de moletons.';
+      break;
+    case 8:
+      msg = 'O olho vermelho não é o que vocês estão pensando.';
+      break;
+    case 9:
+      msg = 'Pão de batata.';
+      break;            
+  }
   var photo = __dirname + '/img/xchow/' + rand + '.jpg';
-  bot.sendPhoto(chatId, photo, {caption: "Esse é nervoso"});
+  bot.sendPhoto(chatId, photo, {caption: msg});
 });
 
 
