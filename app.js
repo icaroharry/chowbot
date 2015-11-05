@@ -16,7 +16,7 @@ bot.getMe().then(function (me) {
 // Matches /photo
 bot.onText(/\/random/, function (msg) {
   var chatId = msg.chat.id;
-  var rand = Math.floor(Math.random() * 10);
+  var rand = Math.floor(Math.random() * 17);
   // From file
   var photo = __dirname + '/img/' + rand + '.jpg';
   bot.sendPhoto(chatId, photo, {caption: "Chowmitos"});
@@ -58,3 +58,55 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
   var resp = match[1];
   bot.sendMessage(chatId, resp);
 });
+
+// get a x-chow
+bot.onText(/\/xchow/, function (msg) {
+  var chatId = msg.chat.id;
+  var rand = Math.floor(Math.random() * 10);
+  // From file
+  var msg = '';
+  switch(rand){
+    case 0:
+      msg = 'Eu invoco o Furacão de Bugs!!!!';
+      break;
+    case 1:
+      msg = 'Quero ver passar por cima do meu Mojito!';
+      break;
+    case 2:
+      msg = 'Meu ruivo vai te enfeitiçar!';
+      break;  
+    case 3:
+      msg = 'Vou implantar a ditadura chowmunista';
+      break;
+    case 4:
+      msg = 'Não adianta esconder as putarias fechando a porta!';
+      break;
+    case 5:
+      msg = 'Controlo sua mente e te levo para o mundo da raposinha';
+      break;
+    case 6:
+      msg = 'Minha beleza sufoca. Vou sugar suas energias.';
+      break;
+    case 7:
+      msg = 'Não há frio que resista ao meu exército de moletons.';
+      break;
+    case 8:
+      msg = 'O olho vermelho não é o que vocês estão pensando.';
+      break;
+    case 9:
+      msg = 'Pão de batata.';
+      break;            
+  }
+  var photo = __dirname + '/img/xchow/' + rand + '.jpg';
+  bot.sendPhoto(chatId, photo, {caption: msg});
+});
+
+
+// Matches a x-chow
+bot.onText(/\/natal/, function (msg) {
+  var chatId = msg.chat.id;
+  // From file
+  var photo = __dirname + '/img/izaunatal.jpg';
+  bot.sendPhoto(chatId, photo, {caption: "Filis Natau"});
+});
+
