@@ -13,6 +13,8 @@ var options = {
     cert: __dirname+'/crt.pem'
   }
 };
+console.log(port);
+console.log(host);
 
 var bot = new TelegramBot(token, options);
 
