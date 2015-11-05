@@ -1,15 +1,23 @@
 var TelegramBot = require('node-telegram-bot-api');
 var request = require('request');
 
-var options = {
-  polling: true
-};
-
 var token = process.env.TELEGRAM_BOT_TOKEN || '141314625:AAG4DlFQG0y7qAgQ5Ly1S14uyOLcMH7hNzw';
 var port = process.env.PORT || 8443;
 var host = process.env.HOST;
 
-var bot = new TelegramBot(token, {webHook: {port: port, host: host}});
+var options = {
+  webHook: {
+    port: port,
+    host: host,
+    key: __dirname+'/key.pem',
+    cert: __dirname+'/crt.pem'
+  }
+};
+
+var bot = new TelegramBot(token, options);
+
+bot.setWebHook(host+'/'+token, __dirname+'/crt.pem');
+
 bot.getMe().then(function (me) {
   console.log('Hi my name is %s!', me.username);
 });
