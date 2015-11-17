@@ -42,7 +42,7 @@ bot.onText(/\/badzona/, function (msg) {
 // Matches maconha
 bot.onText(/maconha/, function (mesg) {
   var chatId = mesg.chat.id;
-  var rand = Math.floor(Math.random() * 11);
+  var rand = Math.floor(Math.random() * 18);
   // From file
   var msg = '';
   switch(rand){
@@ -77,7 +77,45 @@ bot.onText(/maconha/, function (mesg) {
       msg = 'É CD Zé! Fala CD.';
       break;
     case 10:
-      msg = 'Bola uma tora aí';
+      msg = 'Gordo, bola uma tora aí';
+      break;
+    case 11:
+      msg = 'Passa a bola, Romário';
+      break;
+    case 12:
+      msg = 'Cremosim, Mateus?';
+      break;
+    case 13:
+      msg = 'maconha? Buguei';
+      break;
+    case 14:
+      msg = 'Ondou uma bate forte';
+      break;
+    case 15:
+      msg = 'Vou apertar, mas não vou acender agora';
+      break;
+    case 16:
+      msg = 'Sérgio é maconheiro?';
+      break;
+    case 17:
+      msg = 'Alguém falou balde?';
+      break;
+  }
+
+  bot.sendMessage(chatId, msg);
+});
+
+bot.onText(/pedra/, function (mesg) {
+  var chatId = mesg.chat.id;
+  var rand = Math.floor(Math.random() * 2);
+  // From file
+  var msg = '';
+  switch(rand){
+    case 0:
+      msg = 'Não fala pedra não, Zé';
+      break;
+    case 1:
+      msg = 'Ta lombrado';
       break;
   }
 
