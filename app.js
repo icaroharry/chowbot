@@ -40,7 +40,8 @@ bot.onText(/\/badzona/, function (msg) {
 });
 
 // Matches maconha
-bot.onText(/maconha/, function (msg) {
+bot.onText(/maconha/, function (mesg) {
+  var chatId = mesg.chat.id;
   var rand = Math.floor(Math.random() * 5);
   // From file
   var msg = '';
