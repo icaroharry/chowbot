@@ -42,7 +42,7 @@ bot.onText(/\/badzona/, function (msg) {
 // Matches maconha
 bot.onText(/maconha/, function (mesg) {
   var chatId = mesg.chat.id;
-  var rand = Math.floor(Math.random() * 5);
+  var rand = Math.floor(Math.random() * 11);
   // From file
   var msg = '';
   switch(rand){
@@ -53,7 +53,7 @@ bot.onText(/maconha/, function (mesg) {
       msg = 'ôo tras a seda bandido';
       break;
     case 2:
-      msg = 'Fez o corre, Mulão?';
+      msg = 'Fez o corre, Jão?';
       break;  
     case 3:
       msg = 'Maconha? Me vê 2 litros';
@@ -62,7 +62,22 @@ bot.onText(/maconha/, function (mesg) {
       msg = 'Tem aí, Zé?';
       break;
     case 5:
-      msg = 'Qroz tem vei.';
+      msg = 'Tem mas acabou';
+      break;
+    case 6:
+      msg = 'Quero de novo.';
+      break;
+    case 7:
+      msg = 'Alguém é Jesus pra salvar nois?';
+      break;
+    case 8:
+      msg = 'Berin, CD é maconha?';
+      break;
+    case 9:
+      msg = 'É CD Zé! Fala CD.';
+      break;
+    case 10:
+      msg = 'Bola uma tora aí';
       break;
   }
 
