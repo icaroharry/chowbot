@@ -39,6 +39,35 @@ bot.onText(/\/badzona/, function (msg) {
   bot.sendAudio(chatId, audio);
 });
 
+// Matches maconha
+bot.onText(/maconha/, function (msg) {
+  var rand = Math.floor(Math.random() * 5);
+  // From file
+  var msg = '';
+  switch(rand){
+    case 0:
+      msg = 'Quero';
+      break;
+    case 1:
+      msg = 'ôo tras a seda bandido';
+      break;
+    case 2:
+      msg = 'Fez o corre, Mulão?';
+      break;  
+    case 3:
+      msg = 'Maconha? Me vê 2 litros';
+      break;
+    case 4:
+      msg = 'Tem aí, Zé?';
+      break;
+    case 5:
+      msg = 'Qroz tem vei.';
+      break;
+  }
+
+  bot.sendMessage(chatId, msg);
+});
+
 // Matches /bad
 bot.onText(/\/tanabad/, function (msg) {
   var chatId = msg.chat.id;
