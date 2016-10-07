@@ -147,7 +147,7 @@ bot.onText(/\/tafeliz/, function (msg) {
           ['SIM']]
       })
     };
-    bot.sendMessage(chatId, 'Ce ta na bad?', opts);
+    bot.sendMessage(chatId, 'Ce ta feliz?', opts);
 });
 
 bot.onText(/\/echo (.+)/, function (msg, match) {
