@@ -35,7 +35,7 @@ bot.onText(/to com frio/, function (msg) {
 bot.onText(/\/badzona/, function (msg) {
   var chatId = msg.chat.id;
   var audio = __dirname + '/audio/0.ogg';
-  
+
   bot.sendAudio(chatId, audio);
 });
 
@@ -54,7 +54,7 @@ bot.onText(/maconha/, function (mesg) {
       break;
     case 2:
       msg = 'Fez o corre, Jão?';
-      break;  
+      break;
     case 3:
       msg = 'Maconha? Me vê 2 litros';
       break;
@@ -130,6 +130,20 @@ bot.onText(/\/tanabad/, function (msg) {
       reply_markup: JSON.stringify({
         keyboard: [
           ['SIM'],
+          ['NÃO CARAI. TO FELIZÃO']]
+      })
+    };
+    bot.sendMessage(chatId, 'Ce ta na bad?', opts);
+});
+
+// Matches /bad
+bot.onText(/\/tafeliz/, function (msg) {
+  var chatId = msg.chat.id;
+  var opts = {
+      reply_to_message_id: msg.message_id,
+      reply_markup: JSON.stringify({
+        keyboard: [
+          ['SIM PORRA. SAI DA BAD CARAI'],
           ['SIM']]
       })
     };
@@ -157,7 +171,7 @@ bot.onText(/\/xchow/, function (msg) {
       break;
     case 2:
       msg = 'Meu ruivo vai te enfeitiçar!';
-      break;  
+      break;
     case 3:
       msg = 'Vou implantar a ditadura chowmunista';
       break;
@@ -178,7 +192,7 @@ bot.onText(/\/xchow/, function (msg) {
       break;
     case 9:
       msg = 'Pão de batata.';
-      break;            
+      break;
   }
   var photo = __dirname + '/img/xchow/' + rand + '.jpg';
   bot.sendPhoto(chatId, photo, {caption: msg});
@@ -192,4 +206,3 @@ bot.onText(/\/natal/, function (msg) {
   var photo = __dirname + '/img/izaunatal.jpg';
   bot.sendPhoto(chatId, photo, {caption: "Filis Natau"});
 });
-
